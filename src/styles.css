@@ -1,17 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap");
+
 @import "tailwindcss";
 
-* {
-  margin: 0;
-  padding: 0;
+@theme {
+  --color-mandarin: #f18046;
+  --color-dark: #212121;
+  --color-green: #4e5c08;
+  --color-whiteDarkMode: #f5e2c8;
+  --color-redError: #dc2626;
+  --color-floralWhite: #fcf8f4;
+  --color-gray: #787880;
+  --color-gray10: #78788010;
 }
-.flex-baseline{
-  
+
+.flex-baseline {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
 main {
   flex: 1;
 }
 
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: "Tektur";
 }
