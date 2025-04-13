@@ -29,10 +29,9 @@ h2 {
 hr {
   background-color: var(--color-dark);
   position: absolute;
-  z-index: -1;
   top: 0;
   height: 100%;
-  width: 1px;
+  width: 2px;
   align-self: center;
 }
 ul {

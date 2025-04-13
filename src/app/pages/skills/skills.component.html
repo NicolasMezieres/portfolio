@@ -1,10 +1,16 @@
-<main class="py-10 px-2.5">
+<main class="py-10 px-2.5 {{ isDark ? 'bg-dark text-oldLace' : ' ' }} ">
   <article>
     <h1 class="text-[28px] text-center pb-4 font-bold">Skills</h1>
     <article class="py-4 flex flex-col gap-10 relative">
-      <hr />
+      <hr class="{{ isDark ? '!bg-champagne' : '' }}" />
       <section class="sectionSkill">
-        <h2 class="w-28 h-28 md:w-36 md:h-36 text-xl md:text-2xl">Frontend</h2>
+        <h2
+          class="text-dark w-28 h-28 md:w-36  md:h-36 text-xl md:text-2xl relative z-10 {{
+            isDark ? '!shadow-[0_4px_4px_[]]' : ''
+          }}"
+        >
+          Frontend
+        </h2>
         <ul class="gap-0.5 md:gap-2">
           <li>
             <ng-icon name="svglReact" aria-label="React" class="md:text-3xl" />
@@ -36,7 +42,13 @@
         </ul>
       </section>
       <section class="sectionSkill">
-        <h2 class="w-28 h-28 md:w-36 md:h-36 text-xl md:text-2xl">Backend</h2>
+        <h2
+          class="w-28 h-28 md:w-36  md:h-36 text-xl md:text-2xl relative z-10 {{
+            isDark ? 'text-dark' : ''
+          }}"
+        >
+          Backend
+        </h2>
         <ul class="gap-0.5 md:gap-2">
           <li>
             <ng-icon
@@ -51,7 +63,13 @@
         </ul>
       </section>
       <section class="sectionSkill">
-        <h2 class="w-28 h-28 md:w-36 md:h-36 text-xl md:text-2xl">Database</h2>
+        <h2
+          class="w-28 h-28 md:w-36  md:h-36 text-xl md:text-2xl relative z-10 {{
+            isDark ? 'text-dark' : ''
+          }}"
+        >
+          Database
+        </h2>
         <ul class="gap-0.5 md:gap-2">
           <li>
             <ng-icon name="svglMysql" aria-label="MySQL" class="md:text-3xl" />
@@ -81,7 +99,13 @@
         </ul>
       </section>
       <section class="sectionSkill">
-        <h2 class="w-28 h-28 md:w-36 md:h-36 text-xl md:text-2xl">Other</h2>
+        <h2
+          class="w-28 h-28 md:w-36  md:h-36 text-xl md:text-2xl relative z-10 {{
+            isDark ? 'text-dark' : ''
+          }}"
+        >
+          Other
+        </h2>
         <ul class="gap-0.5 md:gap-2">
           <li>
             <ng-icon

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, effect, input } from '@angular/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import {
   svglAngular,
@@ -13,6 +13,7 @@ import {
   svglSvelte,
   svglTailwindcss,
 } from '@ng-icons/svgl';
+import { ThemeService } from '../../service/theme';
 @Component({
   selector: 'app-skills .flex-baseline',
   imports: [NgIcon],
@@ -34,4 +35,11 @@ import {
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.css',
 })
-export class SkillsComponent {}
+export class SkillsComponent {
+  isDark: boolean = false;
+  constructor(private themeService: ThemeService) {
+    effect(() => {
+      this.isDark = themeService.getTheme();
+    });
+  }
+}

@@ -1,4 +1,8 @@
-<main class="flex flex-col justify-center items-center pt-10 pb-5 gap-5 px-5">
+<main
+  class="flex flex-col justify-center items-center pt-10 pb-5 gap-5 px-5 {{
+    isDark ? 'bg-dark text-oldLace' : ''
+  }}"
+>
   <h1 class="text-[28px] font-bold">Projects</h1>
   <article>
     <app-project

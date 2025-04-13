@@ -29,3 +29,7 @@ body {
   margin: 0;
   font-family: "Tektur";
 }
+header,
+footer {
+  transition: all 2s;
+}

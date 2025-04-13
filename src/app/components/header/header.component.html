@@ -1,11 +1,28 @@
-<header class="p-5 border-b-[1px] border-dark sm:px-20">
+<header
+  class="p-5 border-b-[1px]  sm:px-20 {{
+    isDark ? 'bg-dark border-mandarin' : 'border-dark'
+  }}"
+>
   <nav class="flex justify-between sm:hidden">
-    <mat-icon>menu</mat-icon>
-    <mat-icon class="material-symbols-outlined">dark_mode</mat-icon>
-    <!-- <mat-icon class="icon">sunny</mat-icon> -->
+    <button mat-raised-button (click)="openMenu()">
+      <mat-icon class="{{ isDark ? '!text-mandarin' : '' }}">menu</mat-icon>
+    </button>
+    @if (isDark) {
+    <button (click)="changeTheme()">
+      <mat-icon class="icon !text-mandarin">sunny</mat-icon>
+    </button>
+    }@else{
+    <button (click)="changeTheme()">
+      <mat-icon class="material-symbols-outlined">dark_mode</mat-icon>
+    </button>
+    }
   </nav>
   <nav class="hidden sm:block">
-    <ul class="flex flex-row justify-between xl:justify-around">
+    <ul
+      class="flex flex-row justify-between xl:justify-around duration-1500 {{
+        isDark ? 'text-champagne' : ''
+      }}"
+    >
       <li>
         <a
           routerLink="/home"
@@ -30,18 +47,15 @@
           >Projects</a
         >
       </li>
-      <li>
-        <a
-          routerLink="/contact"
-          routerLinkActive="active"
-          ariaCurrentWhenActive="page"
-        >
-          Contact</a
-        >
-      </li>
-
-      <mat-icon class="material-symbols-outlined">dark_mode</mat-icon>
-      <!-- <mat-icon>sunny</mat-icon> -->
+      @if (isDark) {
+      <button (click)="changeTheme()">
+        <mat-icon class="icon !text-mandarin">sunny</mat-icon>
+      </button>
+      }@else{
+      <button (click)="changeTheme()">
+        <mat-icon class="material-symbols-outlined">dark_mode</mat-icon>
+      </button>
+      }
     </ul>
   </nav>
 </header>
