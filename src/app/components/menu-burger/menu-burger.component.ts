@@ -1,14 +1,10 @@
 import { Component, inject } from '@angular/core';
-import {
-  MAT_DIALOG_DATA,
-  MatDialogContent,
-  MatDialogRef,
-  MatDialogTitle,
-} from '@angular/material/dialog';
+import { MatDialogRef } from '@angular/material/dialog';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-menu-burger',
-  imports: [],
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './menu-burger.component.html',
   styleUrl: './menu-burger.component.css',
 })
