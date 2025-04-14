@@ -1,1 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --color-mandarin: #f18046;
+  --color-oldLace: #fff4e9;
+  --color-dark: #212121;
+  --color-green: #4e5c08;
+  --color-champagne: #f5e2c8;
+  --color-redError: #dc2626;
+  --color-floralWhite: #fcf8f4;
+  --color-gray: #787880;
+  --color-gray10: #78788010;
+  --color-darkBlue: #17183b;
+}
+
+.flex-baseline {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+main {
+  flex: 1;
+}
+
+body {
+  margin: 0;
+  font-family: "Tektur";
+}
+header,
+footer {
+  transition: all 2s;
+}

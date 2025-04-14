@@ -1,0 +1,128 @@
+<main class="py-10 px-2.5 {{ isDark ? 'bg-dark text-oldLace' : ' ' }} ">
+  <article>
+    <h1 class="text-[28px] text-center pb-4 font-bold">Skills</h1>
+    <article class="py-4 flex flex-col gap-10 relative">
+      <hr class="{{ isDark ? '!bg-champagne' : '' }}" />
+      <section class="sectionSkill">
+        <h2
+          class="text-dark w-28 h-28 md:w-36  md:h-36 text-xl md:text-2xl relative z-10 {{
+            isDark ? '!shadow-[0_4px_4px_[]]' : ''
+          }}"
+        >
+          Frontend
+        </h2>
+        <ul class="gap-0.5 md:gap-2">
+          <li>
+            <ng-icon name="svglReact" aria-label="React" class="md:text-3xl" />
+            React
+          </li>
+          <li>
+            <ng-icon
+              name="svglTailwindcss"
+              aria-label="TailwindCSS"
+              class="md:text-3xl"
+            />
+            TailwindCSS
+          </li>
+          <li>
+            <ng-icon
+              name="svglSvelte"
+              aria-label="Svelte"
+              class="md:text-3xl"
+            />Svelte
+          </li>
+          <li>
+            <ng-icon
+              name="svglAngular"
+              aria-label="Angular"
+              class="md:text-3xl"
+            />
+            Angular
+          </li>
+        </ul>
+      </section>
+      <section class="sectionSkill">
+        <h2
+          class="w-28 h-28 md:w-36  md:h-36 text-xl md:text-2xl relative z-10 {{
+            isDark ? 'text-dark' : ''
+          }}"
+        >
+          Backend
+        </h2>
+        <ul class="gap-0.5 md:gap-2">
+          <li>
+            <ng-icon
+              name="svglNestjs"
+              aria-label="NestJS"
+              class="md:text-3xl"
+            />
+            NestJS
+          </li>
+          <li>Express</li>
+          <li>API Rest</li>
+        </ul>
+      </section>
+      <section class="sectionSkill">
+        <h2
+          class="w-28 h-28 md:w-36  md:h-36 text-xl md:text-2xl relative z-10 {{
+            isDark ? 'text-dark' : ''
+          }}"
+        >
+          Database
+        </h2>
+        <ul class="gap-0.5 md:gap-2">
+          <li>
+            <ng-icon name="svglMysql" aria-label="MySQL" class="md:text-3xl" />
+            MySQL
+          </li>
+          <li>
+            <ng-icon
+              name="svglPostgresql"
+              aria-label="PostgreSQL"
+              class="md:text-3xl"
+            />PostgreSQL
+          </li>
+          <li>
+            <ng-icon
+              name="svglPrisma"
+              aria-label="Prisma"
+              class="md:text-3xl"
+            />Prisma
+          </li>
+          <li>
+            <ng-icon
+              name="svglMongodb"
+              aria-label="MongoDB"
+              class="md:text-3xl"
+            />MongoDB
+          </li>
+        </ul>
+      </section>
+      <section class="sectionSkill">
+        <h2
+          class="w-28 h-28 md:w-36  md:h-36 text-xl md:text-2xl relative z-10 {{
+            isDark ? 'text-dark' : ''
+          }}"
+        >
+          Other
+        </h2>
+        <ul class="gap-0.5 md:gap-2">
+          <li>
+            <ng-icon
+              name="svglFigma"
+              aria-label="Figma"
+              class="md:text-3xl"
+            />Figma
+          </li>
+          <li>
+            <ng-icon
+              name="svglDocker"
+              aria-label="Docker"
+              class="md:text-3xl"
+            />Docker
+          </li>
+        </ul>
+      </section>
+    </article>
+  </article>
+</main>

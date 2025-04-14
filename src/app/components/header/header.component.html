@@ -1,0 +1,61 @@
+<header
+  class="p-5 border-b-[1px]  sm:px-20 {{
+    isDark ? 'bg-dark border-mandarin' : 'border-dark'
+  }}"
+>
+  <nav class="flex justify-between sm:hidden">
+    <button mat-raised-button (click)="openMenu()">
+      <mat-icon class="{{ isDark ? '!text-mandarin' : '' }}">menu</mat-icon>
+    </button>
+    @if (isDark) {
+    <button (click)="changeTheme()">
+      <mat-icon class="icon !text-mandarin">sunny</mat-icon>
+    </button>
+    }@else{
+    <button (click)="changeTheme()">
+      <mat-icon class="material-symbols-outlined">dark_mode</mat-icon>
+    </button>
+    }
+  </nav>
+  <nav class="hidden sm:block">
+    <ul
+      class="flex flex-row justify-between xl:justify-around duration-1500 {{
+        isDark ? 'text-champagne' : ''
+      }}"
+    >
+      <li>
+        <a
+          routerLink="/home"
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="/skills"
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+          >Skills</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="/projects"
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+          >Projects</a
+        >
+      </li>
+      @if (isDark) {
+      <button (click)="changeTheme()">
+        <mat-icon class="icon !text-mandarin">sunny</mat-icon>
+      </button>
+      }@else{
+      <button (click)="changeTheme()">
+        <mat-icon class="material-symbols-outlined">dark_mode</mat-icon>
+      </button>
+      }
+    </ul>
+  </nav>
+</header>
