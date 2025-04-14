@@ -20,6 +20,7 @@ This project is a portfolio, you can find a short presentation, my skills, and m
 ## Technologies
 
 -Angular 19.2.5
+
 -TailwindCSS 4.1
 
 [(return top)](#about)
