@@ -4,15 +4,15 @@
   }}"
 >
   <nav class="flex justify-between sm:hidden">
-    <button mat-raised-button (click)="openMenu()">
+    <button mat-raised-button (click)="openMenu()" aria-label="Menu">
       <mat-icon class="{{ isDark ? '!text-mandarin' : '' }}">menu</mat-icon>
     </button>
     @if (isDark) {
-    <button (click)="changeTheme()">
+    <button (click)="changeTheme()" aria-label="lightMode">
       <mat-icon class="icon !text-mandarin">sunny</mat-icon>
     </button>
     }@else{
-    <button (click)="changeTheme()">
+    <button (click)="changeTheme()" aria-label="darkMode">
       <mat-icon class="material-symbols-outlined">dark_mode</mat-icon>
     </button>
     }
@@ -47,15 +47,17 @@
           >Projects</a
         >
       </li>
-      @if (isDark) {
-      <button (click)="changeTheme()">
-        <mat-icon class="icon !text-mandarin">sunny</mat-icon>
-      </button>
-      }@else{
-      <button (click)="changeTheme()">
-        <mat-icon class="material-symbols-outlined">dark_mode</mat-icon>
-      </button>
-      }
+      <li>
+        @if (isDark) {
+        <button (click)="changeTheme()" aria-label="lightMode">
+          <mat-icon class="icon !text-mandarin">sunny</mat-icon>
+        </button>
+        }@else{
+        <button (click)="changeTheme()" aria-label="darkMode">
+          <mat-icon class="material-symbols-outlined">dark_mode</mat-icon>
+        </button>
+        }
+      </li>
     </ul>
   </nav>
 </header>
