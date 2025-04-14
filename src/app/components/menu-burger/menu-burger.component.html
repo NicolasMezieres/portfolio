@@ -6,8 +6,32 @@
     X
   </button>
   <ul class="w-full flex flex-col gap-20 justify-center items-center text-4xl">
-    <li>Home</li>
-    <li>Skills</li>
-    <li>Projects</li>
+    <li>
+      <a
+        (click)="closeDialog()"
+        routerLink="/home"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        >Home</a
+      >
+    </li>
+    <li>
+      <a
+        (click)="closeDialog()"
+        routerLink="/skills"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        >Skills</a
+      >
+    </li>
+    <li>
+      <a
+        (click)="closeDialog()"
+        routerLink="/projects"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        >Projects</a
+      >
+    </li>
   </ul>
 </section>
