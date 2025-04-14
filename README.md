@@ -13,7 +13,7 @@ This project is a portfolio, you can find a short presentation, my skills, and m
 
 ## Demo
 
-![My portfolio](https://portfolio-nicolas-projects-d55648f9.vercel.app)
+[My portfolio](https://portfolio-nicolas-projects-d55648f9.vercel.app)
 
 [(return top)](#about)
 
@@ -48,18 +48,18 @@ For launch the project
 ## Screenshots
 
 ### Home
-[Home page](https://github.com/NicolasMezieres/portfolio/blob/main/public/assets/img/readme/home.png)
+![Home page](https://github.com/NicolasMezieres/portfolio/blob/main/public/assets/img/readme/home.png)
 
 ### Skills
-[Skills page](https://github.com/NicolasMezieres/portfolio/blob/main/public/assets/img/readme/skills.png)
+![Skills page](https://github.com/NicolasMezieres/portfolio/blob/main/public/assets/img/readme/skills.png)
 
 ### Projects 
-[Projects page](https://github.com/NicolasMezieres/portfolio/blob/main/public/assets/img/readme/projects.png)
+![Projects page](https://github.com/NicolasMezieres/portfolio/blob/main/public/assets/img/readme/projects.png)
 
 ### Not found
-[Page not found](https://github.com/NicolasMezieres/portfolio/blob/main/public/assets/img/readme/notFound.png)
+![Page not found](https://github.com/NicolasMezieres/portfolio/blob/main/public/assets/img/readme/notFound.png)
 
 ### Dark mode
-[Dark mode](https://github.com/NicolasMezieres/portfolio/blob/main/public/assets/img/readme/darkMode.png)
+![Dark mode](https://github.com/NicolasMezieres/portfolio/blob/main/public/assets/img/readme/darkMode.png)
 
 [(return top)](#about)
