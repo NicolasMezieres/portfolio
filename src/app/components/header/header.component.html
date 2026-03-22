@@ -8,13 +8,13 @@
       <mat-icon class="{{ isDark ? '!text-mandarin' : '' }}">menu</mat-icon>
     </button>
     @if (isDark) {
-    <button (click)="changeTheme()" aria-label="lightMode">
-      <mat-icon class="icon !text-mandarin">sunny</mat-icon>
-    </button>
-    }@else{
-    <button (click)="changeTheme()" aria-label="darkMode">
-      <mat-icon class="material-symbols-outlined">dark_mode</mat-icon>
-    </button>
+      <button (click)="changeTheme()" aria-label="lightMode">
+        <mat-icon class="icon !text-mandarin">sunny</mat-icon>
+      </button>
+    } @else {
+      <button (click)="changeTheme()" aria-label="darkMode">
+        <mat-icon class="material-symbols-outlined">dark_mode</mat-icon>
+      </button>
     }
   </nav>
   <nav class="hidden sm:block">
@@ -24,38 +24,26 @@
       }}"
     >
       <li>
-        <a
-          routerLink="/home"
-          routerLinkActive="active"
-          ariaCurrentWhenActive="page"
-          >Home</a
-        >
+        <a routerLink="/home">Home</a>
       </li>
       <li>
-        <a
-          routerLink="/skills"
-          routerLinkActive="active"
-          ariaCurrentWhenActive="page"
-          >Skills</a
-        >
+        <a routerLink="/skills">Skills</a>
       </li>
       <li>
-        <a
-          routerLink="/projects"
-          routerLinkActive="active"
-          ariaCurrentWhenActive="page"
-          >Projects</a
-        >
+        <a routerLink="/projects">Projects</a>
+      </li>
+      <li>
+        <a routerLink="/contact">Contact</a>
       </li>
       <li>
         @if (isDark) {
-        <button (click)="changeTheme()" aria-label="lightMode">
-          <mat-icon class="icon !text-mandarin">sunny</mat-icon>
-        </button>
-        }@else{
-        <button (click)="changeTheme()" aria-label="darkMode">
-          <mat-icon class="material-symbols-outlined">dark_mode</mat-icon>
-        </button>
+          <button (click)="changeTheme()" aria-label="lightMode">
+            <mat-icon class="icon !text-mandarin">sunny</mat-icon>
+          </button>
+        } @else {
+          <button (click)="changeTheme()" aria-label="darkMode">
+            <mat-icon class="material-symbols-outlined">dark_mode</mat-icon>
+          </button>
         }
       </li>
     </ul>
