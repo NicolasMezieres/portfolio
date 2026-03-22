@@ -67,4 +67,11 @@
       Send
     </button>
   </form>
+  <div
+    class="self-center fixed top-10 p-5 border border-dark rounded-2xl bg-oldLace duration-1000 {{
+      isVisibleToast() ? 'opacity-100' : 'opacity-0'
+    }} {{ isErrorToast() ? 'text-redError' : 'text-green-700' }}"
+  >
+    <span>{{ toastMessage() }}</span>
+  </div>
 </main>

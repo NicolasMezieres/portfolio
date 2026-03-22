@@ -6,6 +6,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { EmailService } from '../../service/email/email.service';
 
 @Component({
   selector: 'app-contact',
@@ -13,8 +14,12 @@ import {
   templateUrl: './contact.component.html',
 })
 export class ContactComponent {
+  toastMessage = signal<string>('');
+  isVisibleToast = signal<boolean>(false);
+  isErrorToast = signal<boolean>(false);
   isDark = model<boolean>();
   #themeService = inject(ThemeService);
+  #emailService = inject(EmailService);
   detectChangeTheme = effect(() => {
     const changeDetected = this.#themeService.isDark();
     this.isDark.set(changeDetected);
@@ -38,6 +43,25 @@ export class ContactComponent {
     e.preventDefault();
     this.isSubmit.update(() => true);
     if (this.formContact.valid) {
+      const data = this.formContact.getRawValue();
+      this.#emailService.sendEmail(data).subscribe({
+        next: (res) => {
+          this.toastMessage.update(() => res.message);
+          this.isErrorToast.update(() => false);
+          this.showToast();
+        },
+        error: (err: { error: { detail: string } }) => {
+          this.toastMessage.update(() => err.error.detail);
+          this.isErrorToast.update(() => true);
+          this.showToast();
+        },
+      });
     }
+  }
+  showToast() {
+    this.isVisibleToast.update(() => true);
+    setTimeout(() => {
+      this.isVisibleToast.update(() => false);
+    }, 3000);
   }
 }
