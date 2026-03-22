@@ -49,6 +49,8 @@ export class ContactComponent {
           this.toastMessage.update(() => res.message);
           this.isErrorToast.update(() => false);
           this.showToast();
+          this.formContact.reset();
+          this.isSubmit.update(() => false);
         },
         error: (err: { error: { detail: string } }) => {
           this.toastMessage.update(() => err.error.detail);
