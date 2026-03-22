@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, effect, inject, input, model, signal } from '@angular/core';
 import { linkType } from '../../utils/type';
 import { ThemeService } from '../../service/theme';
 
@@ -14,8 +14,10 @@ export class ProjectComponent {
   description = input.required<string>();
   imagePath = input.required<string>();
   links = input.required<linkType[]>();
-  // isDark: boolean = false;
-  // constructor(private themeService: ThemeService) {
-  //   this.isDark = themeService.getTheme();
-  // }
+  isDark = model<boolean>();
+  #themeService = inject(ThemeService);
+  effectChangeTheme = effect(() => {
+    const detectChange = this.#themeService.isDark();
+    this.isDark.set(detectChange);
+  });
 }

@@ -1,6 +1,4 @@
 import { Component, effect, input } from '@angular/core';
-import { HeaderComponent } from '../../components/header/header.component';
-import { FooterComponent } from '../../components/footer/footer.component';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { jamGithub } from '@ng-icons/jam-icons';
 import { bootstrapLinkedin } from '@ng-icons/bootstrap-icons';
