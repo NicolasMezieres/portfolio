@@ -1,12 +1,12 @@
 import { Component, effect, inject } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { menuBurger } from '../menu-burger/menu-burger.component';
 import { ThemeService } from '../../service/theme';
 @Component({
   selector: 'app-header',
-  imports: [MatIconModule, RouterLink, RouterLinkActive],
+  imports: [MatIconModule, RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
 })

@@ -1,0 +1,77 @@
+<main
+  class="px-5 flex flex-1 flex-col py-10  md:px-10 xl:px-20 {{
+    isDark() ? 'bg-dark text-oldLace' : ''
+  }}"
+>
+  <h1 class="text-center text-2xl mb-5">Contact</h1>
+  <form
+    [formGroup]="formContact"
+    class="flex flex-col gap-10 md:w-83.5 self-center"
+  >
+    <div class="flex flex-col gap-2">
+      <label for="email" class="underline text-xl">Email</label>
+      <input
+        type="email"
+        id="email"
+        placeholder="Email..."
+        [formControl]="formContact.controls['email']"
+        class="text-dark bg-oldLace border border-dark rounded-[10px] p-4 shadow-[0_5px_5px_#17183B80]"
+      />
+      @if (formContact.controls.email.touched || isSubmit()) {
+        @if (formContact.controls["email"].hasError("required")) {
+          <span class="text-redError">This field is required</span>
+        } @else if (formContact.controls["email"].hasError("email")) {
+          <span class="text-redError">This is not a valid email</span>
+        }
+      }
+    </div>
+    <div class="flex flex-col gap-2">
+      <label for="subject" class="underline text-xl">Subject</label>
+      <input
+        id="subject"
+        placeholder="Subject..."
+        [formControl]="formContact.controls['subject']"
+        class="text-dark bg-oldLace border border-dark rounded-[10px] p-4 shadow-[0_5px_5px_#17183B80]"
+      />
+      @if (formContact.controls.subject.touched || isSubmit()) {
+        @if (formContact.controls["subject"].hasError("required")) {
+          <span class="text-redError">This field is required</span>
+        } @else if (formContact.controls["subject"].hasError("maxlength")) {
+          <span class="text-redError"
+            >This field cannot contain more than 50 characters.</span
+          >
+        }
+      }
+    </div>
+    <div class="flex flex-col gap-2">
+      <label for="message" class="underline text-xl">Message</label>
+      <textarea
+        id="message"
+        placeholder="Message..."
+        [formControl]="formContact.controls['text']"
+        class="text-dark bg-oldLace border border-dark rounded-[10px] p-4 shadow-[0_5px_5px_#17183B80] min-h-32"
+      ></textarea>
+      @if (formContact.controls.text.touched || isSubmit()) {
+        @if (formContact.controls["text"].hasError("required")) {
+          <span class="text-redError">This field is required</span>
+        }
+      }
+    </div>
+    <button
+      aria-label="Send email"
+      class="text-dark self-center bg-oldLace p-2.5 text-xl border border-dark {{
+        isDark() ? 'shadow-[0_3px_3px_#F18046]' : 'shadow-[0_4px_4px_#17183Bb0]'
+      }} w-1/3 rounded-[20px] cursor-pointer "
+      (click)="submitEmail($event)"
+    >
+      Send
+    </button>
+  </form>
+  <div
+    class="self-center fixed top-10 p-5 border border-dark rounded-2xl bg-oldLace duration-1000 {{
+      isVisibleToast() ? 'opacity-100' : 'opacity-0'
+    }} {{ isErrorToast() ? 'text-redError' : 'text-green-700' }}"
+  >
+    <span>{{ toastMessage() }}</span>
+  </div>
+</main>
