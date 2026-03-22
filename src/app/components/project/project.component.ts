@@ -9,6 +9,7 @@ import { ThemeService } from '../../service/theme';
   styleUrl: './project.component.css',
 })
 export class ProjectComponent {
+  textAlt = input.required<string>();
   titleProject = input.required<string>();
   stackList = input.required<string[]>();
   description = input.required<string>();
