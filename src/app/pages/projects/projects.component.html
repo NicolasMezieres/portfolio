@@ -6,6 +6,26 @@
   <h1 class="text-[28px] font-bold">Projects</h1>
   <article>
     <app-project
+      textAlt="PosteMan image presentation"
+      titleProject="PosteMan"
+      [stackList]="['Angular', 'NestJS', 'PostgreSQL', 'WebSocket']"
+      [links]="[
+        {
+          text: 'GitHub Front',
+          link: 'https://github.com/NicolasMezieres/Poste-Man-Front',
+        },
+        {
+          text: 'GitHub Back',
+          link: 'https://github.com/NicolasMezieres/Poste-man-Back',
+        },
+      ]"
+      imagePath="assets/img/posteman.png"
+      [description]="
+        'This project is an application designed to facilitate communication and organization within a group, with real-time features such as: <br> - Instant messaging with other group members <br> - A post board, inspired by sticky notes, for sharing ideas, organizing tasks, and structuring projects '
+      "
+    />
+    <app-project
+      textAlt="Go Together image presentation"
       [titleProject]="'Go Together'"
       [stackList]="['Svelte', 'NestJS', 'PostgreSQL']"
       [imagePath]="'assets/img/goTogether.png'"
@@ -22,6 +42,7 @@
     ></app-project>
     <hr class="w-full h-px py-5" />
     <app-project
+      textAlt="Le Bon Petit Plat image presentation"
       [titleProject]="'Le Bon Petit Plat'"
       [stackList]="['React', 'NestJS', 'PostgreSQL']"
       [imagePath]="'assets/img/leBonPetitPlat.png'"
@@ -41,6 +62,7 @@
     ></app-project>
     <hr class="w-full h-1px py-5" />
     <app-project
+      textAlt="Pictochat image presentation"
       [titleProject]="'Pictochat'"
       [stackList]="['HTML', 'CSS', 'JS', 'Express', 'MySQL', 'MongoDB']"
       [imagePath]="'assets/img/pictochat.png'"
@@ -60,6 +82,7 @@
     ></app-project>
     <hr class="w-full h-px py-5" />
     <app-project
+      textAlt="Slime Tower Defense image presentation"
       [titleProject]="'Slime Tower Defense'"
       [stackList]="['HTML', 'CSS', 'JS']"
       [imagePath]="'assets/img/slimeTowerDefense.png'"
