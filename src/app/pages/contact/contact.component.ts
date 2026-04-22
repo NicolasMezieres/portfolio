@@ -34,7 +34,7 @@ export class ContactComponent {
       nonNullable: true,
       validators: [Validators.required, Validators.maxLength(50)],
     }),
-    text: new FormControl('', {
+    message: new FormControl('', {
       nonNullable: true,
       validators: [Validators.required],
     }),
@@ -52,8 +52,8 @@ export class ContactComponent {
           this.formContact.reset();
           this.isSubmit.update(() => false);
         },
-        error: (err: { error: { detail: string } }) => {
-          this.toastMessage.update(() => err.error.detail);
+        error: (err: { error: { message: string } }) => {
+          this.toastMessage.update(() => err.error.message);
           this.isErrorToast.update(() => true);
           this.showToast();
         },

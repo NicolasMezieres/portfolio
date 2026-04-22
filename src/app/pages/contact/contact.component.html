@@ -48,11 +48,11 @@
       <textarea
         id="message"
         placeholder="Message..."
-        [formControl]="formContact.controls['text']"
+        [formControl]="formContact.controls['message']"
         class="text-dark bg-oldLace border border-dark rounded-[10px] p-4 shadow-[0_5px_5px_#17183B80] min-h-32"
       ></textarea>
-      @if (formContact.controls.text.touched || isSubmit()) {
-        @if (formContact.controls["text"].hasError("required")) {
+      @if (formContact.controls.message.touched || isSubmit()) {
+        @if (formContact.controls["message"].hasError("required")) {
           <span class="text-redError">This field is required</span>
         }
       }

@@ -5,5 +5,5 @@ export type linkType = {
 export type dataSendEmail = {
   email: string;
   subject: string;
-  text: string;
+  message: string;
 };
