@@ -12,6 +12,6 @@ export class EmailService {
   #url = environment.apiUrl;
 
   sendEmail(data: dataSendEmail): Observable<{ message: string }> {
-    return this.#http.post<{ message: string }>(`${this.#url}email`, data);
+    return this.#http.post<{ message: string }>(`${this.#url}email/send`, data);
   }
 }
